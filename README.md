@@ -1,1 +1,1 @@
-#My Codility Lessons in C Answers
+#My Codility Lessons Answers in C
