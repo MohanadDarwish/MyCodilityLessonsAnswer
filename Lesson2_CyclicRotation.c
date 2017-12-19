@@ -8,7 +8,7 @@ struct Results solution(int A[], int N, int K) {
     while(K>N && K>0 && N>0) 
         K-=N;
    
-    if(K!=0 && N!=0 && N!=1 && (N!=K) && (K%N!=0) )
+    if(K!=0 && N!=0 && N!=1 && (N!=K) )
     { 
         short i=0,j=K-1;
         short temp[K];
