@@ -1,0 +1,38 @@
+// you can use includes, for example:
+// #include <algorithm>
+
+// you can write to stdout for debugging purposes, e.g.
+// cout << "this is a debug message" << endl;
+
+int solution(vector<int> &A) {
+	// write your code in C++14 (g++ 6.2.0)
+	int S = 0, R = 0, L = 0, diff = 0;
+	for (size_t i = 0; i < A.size(); i++)
+	{
+		S = S + A[i];
+		diff = diff + abs(A[i]);
+	}
+	R = S;
+	//
+	for (size_t i = 0; i < A.size()-1; i++)
+	{
+		L = L + A[i];
+		R = R - A[i];
+    //instead of the if else if else if we can use:
+    //diff = min(diff,abs(R-L));
+		if ((R > L) && ((R - L) < diff))
+		{
+			diff = R - L;//+ve
+		}
+		else if ((L > R) && ((L - R) < diff))
+		{
+			diff = L - R;//+ve
+		}
+		else if( L == R )
+		{
+			diff = 0;
+			break;
+		}
+	}
+	return diff;
+}
