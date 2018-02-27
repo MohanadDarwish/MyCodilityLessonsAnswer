@@ -1,5 +1,6 @@
-// you can write to stdout for debugging purposes, e.g.
-// printf("this is a debug message\n");
+//--------------------------------------------------------------------------------------//
+//Lesson Link: https://app.codility.com/programmers/lessons/2-arrays/cyclic_rotation/
+//--------------------------------------------------------------------------------------//
 
 struct Results solution(int A[], int N, int K) {
     struct Results result;
